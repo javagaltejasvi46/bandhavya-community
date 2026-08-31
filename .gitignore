@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.env
+.venv
+venv/
+env/
+
+# Node / Next.js
+node_modules/
+.next/
+.npm
+npm-debug.log*
+
+# Docker
+.dockerignore
+
+# Environment files
+*.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Alembic versions (keep structure, ignore generated migrations if needed)
+# backend/alembic/versions/
+
+# Build artifacts
+dist/
+build/
+out/
+
+# Logs
+*.log

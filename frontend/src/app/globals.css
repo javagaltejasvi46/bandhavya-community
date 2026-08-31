@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-cream-white: #FFF8F0;
+  --color-soft-ivory: #F8F4EC;
+  --color-jaipur-pink: #D96C8F;
+  --color-royal-blue: #234E70;
+  --color-deep-indigo: #1E3A5F;
+  --color-desert-sand: #D8B384;
+  --color-marigold: #F4A300;
+  --color-terracotta: #C76B42;
+  --color-peacock-teal: #1F7A8C;
+  --color-sage-green: #8FAF88;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1E3A5F;
+  min-height: 100vh;
+  background-color: #F8F4EC;
+  background-image: radial-gradient(at 0% 0%, rgba(217, 108, 143, 0.12) 0px, transparent 50%),
+                    radial-gradient(at 100% 0%, rgba(35, 78, 112, 0.12) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(244, 163, 0, 0.08) 0px, transparent 50%),
+                    radial-gradient(at 0% 100%, rgba(31, 122, 140, 0.10) 0px, transparent 50%),
+                    url('/images/background.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Floating Heritage Glass Utilities */
+.glass-card {
+  background: rgba(255, 248, 240, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(35, 78, 112, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(35, 78, 112, 0.13);
+  border-color: rgba(217, 108, 143, 0.4);
+}
+
+.glass-nav {
+  background: rgba(255, 248, 240, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(30, 58, 95, 0.08);
+}
+
+.glass-button-primary {
+  background: linear-gradient(135deg, #D96C8F 0%, #C76B42 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(217, 108, 143, 0.3);
+  transition: all 0.2s ease;
+}
+
+.glass-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(217, 108, 143, 0.45);
+}
+
+.glass-button-secondary {
+  background: rgba(35, 78, 112, 0.08);
+  color: #234E70;
+  border: 1px solid rgba(35, 78, 112, 0.2);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.glass-button-secondary:hover {
+  background: rgba(35, 78, 112, 0.15);
+  transform: translateY(-2px);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(35, 78, 112, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  color: #1E3A5F;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #D96C8F;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(217, 108, 143, 0.15);
+}
+
+.flash-highlight {
+  animation: highlightFlash 2.5s ease-out;
+}
+
+@keyframes highlightFlash {
+  0% { ring-width: 8px; ring-color: #D96C8F; transform: scale(1.05); }
+  50% { ring-width: 6px; ring-color: #F4A300; transform: scale(1.02); }
+  100% { ring-width: 0px; ring-color: transparent; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-card, .glass-button-primary, .glass-button-secondary, .flash-highlight {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
