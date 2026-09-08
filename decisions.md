@@ -13,6 +13,7 @@ This file maintains a permanent, chronological record of all architectural, stru
 | [ADR-003](#adr-003-mock-data-service-layer-for-initial-ui-development) | 2026-08-31 | Mock Data Service Layer for Initial UI Development | Accepted / Implemented |
 | [ADR-004](#adr-004-page-specific-transition-animations-using-framer-motion) | 2026-09-04 | Page-Specific Transition Animations Using Framer Motion | Accepted / Implemented |
 | [ADR-005](#adr-005-mandatory-decision-logging-in-decisionsmd) | 2026-09-04 | Mandatory Decision Logging in `decisions.md` | Accepted / Active |
+| [ADR-006](#adr-006-comprehensive-master-platform-blueprint-project_explainedmd) | 2026-09-08 | Comprehensive Master Platform Blueprint (`PROJECT_EXPLAINED.md`) | Accepted / Implemented |
 
 ---
 
@@ -73,9 +74,29 @@ This file maintains a permanent, chronological record of all architectural, stru
 - **Date:** 2026-09-04
 - **Status:** Accepted / Active
 - **Context:** The user requested that every technical and architectural decision taken must be formally logged with a valid reason.
-- **Decision:** Established `decisions.md` in the workspace root as the single source of truth for all decisions. Any future feature choice, dependency selection, refactoring, or architectural change must be appended with:
+- **Decision Taken:** Established `decisions.md` in the workspace root as the single source of truth for all decisions. Any future feature choice, dependency selection, refactoring, or architectural change must be appended with:
   - Date & Status
   - Context / Problem
   - Decision Taken
   - Valid Reason & Justification
 - **Reason:** Guarantees transparency, traceability, and continuity across sessions and contributors.
+
+---
+
+## ADR-006: Comprehensive Master Platform Blueprint (`PROJECT_EXPLAINED.md`)
+
+- **Date:** 2026-09-08
+- **Status:** Accepted / Implemented
+- **Context:** The user requested an exhaustive, single explanatory markdown document detailing every nook and corner of the Bhandhavya platform assuming full completion across frontend, backend, infrastructure, security, data schemas, and deployment layers.
+- **Decision:** Authored `PROJECT_EXPLAINED.md` in the root workspace. The document covers:
+  1. Executive Vision & Cultural Mission
+  2. Full-Stack Architecture & High-Level System Topology
+  3. RBAC Matrix & Authentication Protocol
+  4. Complete UI/UX Walkthrough (every page, component, and signature animation)
+  5. Backend Service Architecture & API Endpoints
+  6. Database Models, Entities & Relationships (PostgreSQL / SQLAlchemy)
+  7. Object Storage & Media Processing Pipeline (Cloudflare R2)
+  8. End-to-End User Workflows (RSVP, Seva Donations, Blog Moderation, Direct Uploads)
+  9. DevOps, Multi-Container Docker Stack, Nginx Configuration & Production Hardening
+  10. Complete File Sitemap & Directory Structure
+- **Reason:** Ensures that any developer, administrator, or stakeholder can navigate, understand, operate, maintain, and expand the platform with 100% clarity and zero ambiguity.
